@@ -43,17 +43,13 @@ function App() {
       setCount(count + 1);
     }
     else if(len === 15){
-      document.getElementById("btnsmt").style.display = 'none';
-      document.getElementById("btnfin").style.display = 'none';
-      document.getElementById("infield").style.display = 'none';
+      document.getElementById("FormRead").style.display = 'none';
       alert('Ya no hay mas horarios disponibles');
     }
   }
 
   const Ended = () =>{
-    document.getElementById("btnsmt").style.display = 'none';
-    document.getElementById("btnfin").style.display = 'none';
-    document.getElementById("infield").style.display = 'none';
+    document.getElementById("FormRead").style.display = 'none';
     alert('Estos son los horarios del aula');
   }
 
@@ -62,15 +58,15 @@ function App() {
       <h2>Generador de horarios</h2>
         <form id="FormRead" name="FormRead"  method="post" onSubmit={handleSubmit}>
             <input onChange={handleChange} name="materia" className="effect-1" type="text" id="infield" placeholder="Nombre de la materia" value={input}/>
-            <div className="div_btn">
+            <div className="div_btn" id="div_btn">
                 <button type="submit" className="button" id="btnsmt">Guardar</button>
                 <button type="button" className="button2" id="btnfin" onClick={Ended}>Finalizar Horarios</button>
             </div>
-            {len >= 1 ? <Tables data={semana}/> : ''}
-            {len >= 15 ? console.log(semana) : console.log('nada')}
-            {console.log('Cantidad de materias:',Object.keys(semana).length)}
-            {console.log('count:',count)}
         </form>
+        {len >= 1 ? <Tables data={semana}/> : ''}
+        {len >= 15 ? console.log(semana) : console.log('nada')}
+        {console.log('Cantidad de materias:',Object.keys(semana).length)}
+        {console.log('count:',count)}
     </div>
   );
 }
