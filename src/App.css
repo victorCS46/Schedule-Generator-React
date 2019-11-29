@@ -20,3 +20,41 @@
 .App-link {
   color: #09d3ac;
 }
+
+th{
+  border:solid 2px;
+  text-align: center;
+}
+td{
+  border:solid 2px;
+  text-align: none;
+}
+.vcs-table{
+  font-family: sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  border-collapse: collapse;
+  transition: all 0.5s ease 0s;
+}
+
+.vcs-table td{
+  border: 2px solid rgb(173, 170, 170);
+  padding: 8px;
+}
+.vcs-table th{
+  border: 2px solid rgb(32, 163, 224);;
+  background-color: rgb(32, 163, 224);
+  color: white;
+  padding: 8px;
+}
+
+.vcs-table:nth-child(even){background-color: #f2f2f2;color:black}
+
+.vcs-table{
+  margin-top: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(226, 226, 226);
+  color: black;
+}
