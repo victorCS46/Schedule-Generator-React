@@ -17,7 +17,7 @@ function Tables(props) {
     <div>
       <center>
         <div>
-          <table class="vcs-table">
+          <table className="vcs-table">
             <thead>
               <tr>
                 <th>Dia</th>
