@@ -1,11 +1,10 @@
 import React from 'react';
 
-
-function Tables(props) {
-  console.log('Hi table');
+function Lunes(props) {
+  console.log('Hi Monday');
   // const x = props.data.map(item => ());
 
-  const lunes = props.data.slice(0, 16).map(item => (
+  const lunes = props.data.slice(0, 3).map(item => (
     <tr>
       <td>{item.dia}</td>
       <td>{item.materia}</td>
@@ -14,7 +13,7 @@ function Tables(props) {
   ))
 
   return (
-    <div>
+    <div className="table-div">
       <center>
         <div>
           <table className="vcs-table">
@@ -34,4 +33,5 @@ function Tables(props) {
     </div>
   );
 }
-export default Tables;
+
+export default Lunes;

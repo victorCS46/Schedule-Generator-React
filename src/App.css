@@ -41,6 +41,10 @@ td{
   margin-right: 41.5%;
 }
 
+.table-div{
+  float: left;
+}
+
 .vcs-table td{
   border: 2px solid rgb(173, 170, 170);
   padding: 8px;

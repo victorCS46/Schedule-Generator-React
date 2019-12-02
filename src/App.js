@@ -1,7 +1,9 @@
-import React, {useState,/*useEffect*/} from 'react';
-// import axios from 'axios';
-// import logo from './logo.svg';
-import Tables from './components/Tables';
+import React, {useState} from 'react';
+import Lunes from './components/Lunes';
+import Martes from './components/Martes';
+import Miercoles from './components/Miercoles';
+import Jueves from './components/Jueves';
+import Viernes from './components/Viernes';
 import './App.css';
 
 function App() {
@@ -63,7 +65,11 @@ function App() {
                 <button type="button" className="button2" id="btnfin" onClick={Ended}>Finalizar Horarios</button>
             </div>
         </form>
-        {len >= 1 ? <Tables data={semana}/> : ''}
+        {len >= 1 ? <Lunes data={semana}/> : ''}
+        {len >= 4 ? <Martes data={semana}/> : ''}
+        {len >= 7 ? <Miercoles data={semana}/> : ''}
+        {len >= 10 ? <Jueves data={semana}/> : ''}
+        {len >= 13 ? <Viernes data={semana}/> : ''}
         {len >= 15 ? console.log(semana) : console.log('nada')}
         {console.log('Cantidad de materias:',Object.keys(semana).length)}
         {console.log('count:',count)}
