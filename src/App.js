@@ -62,6 +62,7 @@ function App() {
   return (
     <div className="App">
       <div className="header">
+        <label id="counter">Horarios disponibles: 15</label>
         <h2>Generador de horarios</h2>
       </div>
         <form id="FormRead" name="FormRead"  method="post" onSubmit={handleSubmit}>
@@ -71,7 +72,6 @@ function App() {
                 <button type="button" className="button2" id="btnfin" onClick={Ended}>Finalizar Horarios</button>
             </div>
         </form>
-        <label id="counter">Horarios disponibles: 15</label>
         {len >= 1  ? <Lunes     data={semana}/> : ''}
         {len >= 4  ? <Martes    data={semana}/> : ''}
         {len >= 7  ? <Miercoles data={semana}/> : ''}
