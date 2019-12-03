@@ -21,53 +21,6 @@
   color: #09d3ac;
 }
 
-/* Table */
-
-th{
-  border:solid 2px;
-  text-align: center;
-}
-td{
-  border:solid 2px;
-  text-align: none;
-}
-
-.vcs-table{
-  font-family: sans-serif;
-  margin-right: auto;
-  margin-left: auto;
-  border-collapse: collapse;
-  transition: all 0.5s ease 0s;
-  margin-right: 41.5%;
-}
-
-.table-div{
-  float: left;
-}
-
-.vcs-table td{
-  border: 2px solid rgb(173, 170, 170);
-  padding: 8px;
-}
-.vcs-table th{
-  border: 2px solid rgb(32, 163, 224);;
-  background-color: rgb(32, 163, 224);
-  color: white;
-  padding: 8px;
-}
-
-.vcs-table:nth-child(even){background-color: #f2f2f2;color:black}
-
-.vcs-table{
-  margin-top: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: rgb(226, 226, 226);
-  color: black;
-  
-}
-
 /* Input */
 
 .effect-1 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
@@ -80,10 +33,10 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
 /* Buttons */
 
 .button {
-  display: inline-flex;
+  display: block;
   height: 40px;
-  float: left;
   width: 150px;
+  margin: auto;
   border: 2px solid #BFC0C0;
   color: #000;
   background-color: rgb(32, 163, 224);
@@ -94,13 +47,10 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
   justify-content: center;
   overflow: hidden;
   transition: all 0.5s ease 0s;
-  margin-left: 40%;
-  margin-right: 1%;
-  margin-bottom: 2%;
 }
 
 .button:hover {
-  display: inline-flex;
+  display: block;
   height: 40px;
   width: 150px;
   border: 2px solid #BFC0C0;
@@ -117,10 +67,11 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
 }
 
 .button2 {
-  display: inline-flex;
+  display: block;
   height: 40px;
   width: 150px;
-  float: left;
+  margin: auto;
+  margin-top: 5px;
   border: 2px solid #BFC0C0;
   color: #000;
   background-color: rgb(231, 130, 35);
@@ -135,7 +86,7 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
 }
 
 .button2:hover {
-  display: inline-flex;
+  display: block;
   height: 40px;
   width: 150px;
   border: 2px solid #BFC0C0;
@@ -149,4 +100,49 @@ input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width
   justify-content: center;
   overflow: hidden;
   transition: all 0.5s ease 0s;
+}
+/* Tables */
+
+.table-div{
+  float: left;
+  margin: 37px;
+}
+
+.vcs-table{
+  font-family: sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  border-collapse: collapse;
+  transition: all 0.5s ease 0s;
+}
+
+.vcs-table td{
+  border: 2px solid rgb(173, 170, 170);
+  padding: 6px;
+}
+.vcs-table th{
+  border: 2px solid rgb(99, 99, 99);
+  background-color: rgb(59, 157, 202);
+  color: white;
+  padding: 8px;
+}
+
+.vcs-table:nth-child(even){background-color: #f2f2f2;color:black}
+
+.vcs-table{
+  margin-top: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(226, 226, 226);
+  color: black; 
+}
+
+th{
+  border:solid 2px;
+  text-align: center;
+}
+td{
+  border:solid 2px;
+  text-align: none;
 }

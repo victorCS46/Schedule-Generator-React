@@ -1,12 +1,8 @@
 import React from 'react';
 
 function Lunes(props) {
-  console.log('Hi Monday');
-  // const x = props.data.map(item => ());
-
   const lunes = props.data.slice(0, 3).map(item => (
     <tr>
-      <td>{item.dia}</td>
       <td>{item.materia}</td>
       <td>{item.hora}</td>
     </tr>
@@ -19,7 +15,9 @@ function Lunes(props) {
           <table className="vcs-table">
             <thead>
               <tr>
-                <th>Dia</th>
+                <th colSpan="2">Lunes</th>
+              </tr>
+              <tr>
                 <th>Materia</th>
                 <th>Horas</th>
               </tr>
