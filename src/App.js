@@ -23,32 +23,37 @@ function App() {
   //Agregando materias con sus dias y horarios
   const handleSubmit =  (e) => {
     e.preventDefault();
-    setQuan(quan - 1);
-    setIte(ite + 1);
-    var hora = ['9:00am - 1:00pm','2:00pm - 6:00pm','6:00pm - 10:00pm'];
-    var dias = ['Lunes','Martes','Miercoles','Jueves','Viernes'];
-    setSemana(semana.concat([{dia:dias[count],materia:input,hora:hora[ite]}]));
-    document.getElementById("counter").innerHTML = "Horarios disponibles: "+quan;
-    if (ite === 2) {
-      setIte(0);
-    }
-
-    if(len === 2) {
-      setCount(count + 1);
-    }
-    else if(len === 5) {
-      setCount(count + 1);
-    }
-    else if(len === 8) {
-      setCount(count + 1);
-    }
-    else if(len === 11) {
-      setCount(count + 1);
-    }
-    else if(len === 15) {
-      document.getElementById("FormRead").style.display = 'none';
-      document.getElementById("counter").style.display = 'none';
-      alert('Ya no hay mas horarios disponibles');
+    if(document.getElementById("infield").value === ''){
+      alert("Por favor ingrese una materia");
+    }else{
+      setQuan(quan - 1);
+      setIte(ite + 1);
+      setInput('');
+      var hora = ['9:00am - 1:00pm','2:00pm - 6:00pm','6:00pm - 10:00pm'];
+      var dias = ['Lunes','Martes','Miercoles','Jueves','Viernes'];
+      setSemana(semana.concat([{dia:dias[count],materia:input,hora:hora[ite]}]));
+      document.getElementById("counter").innerHTML = "Horarios disponibles: "+quan;
+      if (ite === 2) {
+        setIte(0);
+      }
+  
+      if(len === 2) {
+        setCount(count + 1);
+      }
+      else if(len === 5) {
+        setCount(count + 1);
+      }
+      else if(len === 8) {
+        setCount(count + 1);
+      }
+      else if(len === 11) {
+        setCount(count + 1);
+      }
+      else if(len === 15) {
+        document.getElementById("FormRead").style.display = 'none';
+        document.getElementById("counter").style.display = 'none';
+        alert('Ya no hay mas horarios disponibles');
+      }
     }
   }
 
